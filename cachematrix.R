@@ -1,4 +1,4 @@
-## These functions implements matrix object capable to cache value
+## These functions implement matrix object capable to cache value
 ## of its inverse matrix. If calculation of inverse matrix (for the
 ## same source matrix) is done repeatedly, these function can reduce
 ## calculation time.
@@ -50,7 +50,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Returns
 ##    inverse of matrix passed by parameter
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x) {
         ## Let's try to take inverse matrix from cache
         inv <- x$getInverse()
         if( !is.null(inv) ) {
@@ -59,7 +59,7 @@ cacheSolve <- function(x, ...) {
         }
         ## Get data matrix and calculate inverse matrix
         m <- x$get()
-        inv <- solve(m, ...)
+        inv <- solve(m)
         ## Store inverse matrix to cache
         x$setInverse(inv)
         ## Return (just calculated) inverse matrix
