@@ -14,7 +14,7 @@
 ## system.time({ for( i in 1:100000 ) { cacheSolve(mc) } })
 ## #   user  system elapsed 
 ## #   0.95    0.00    0.95 
-
+## test
 
 
 ## makeCacheMatrix() function creates a matrix "object" capable
